@@ -157,6 +157,7 @@ public class MainActivity extends Activity {
                 fragment = new FragmentOffice();
             	break;
             case 3:
+                fragment = new FragmentKitchen();
                 break;
             case 4:
                 break;

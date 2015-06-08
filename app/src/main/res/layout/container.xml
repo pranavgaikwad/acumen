@@ -12,6 +12,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="300dp"
+        android:scaleType="fitXY"
         android:padding="5dp"
         android:contentDescription="Loading"
         android:layout_centerHorizontal="true"

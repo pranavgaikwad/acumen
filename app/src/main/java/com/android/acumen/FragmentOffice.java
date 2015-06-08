@@ -18,7 +18,7 @@ public class FragmentOffice extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_office, container, false);
 
         ViewPager viewPager = (ViewPager)rootView.findViewById(R.id.officeGallery);
-        ImageAdapter imageAdapter = new ImageAdapter(getActivity());
+        ImageAdapter imageAdapter = new ImageAdapter(getActivity(),"http://pg18.comeze.com/apps/acumen/office/list.php","http://pg18.comeze.com/apps/acumen/office/");
         viewPager.setAdapter(imageAdapter);
         viewPager.setCurrentItem(0);
 
