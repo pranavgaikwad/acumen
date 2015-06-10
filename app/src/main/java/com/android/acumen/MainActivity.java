@@ -160,6 +160,7 @@ public class MainActivity extends Activity {
                 fragment = new FragmentKitchen();
                 break;
             case 4:
+                fragment = new FragmentResidential();
                 break;
             case 5:
                 break;
