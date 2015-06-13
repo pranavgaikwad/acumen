@@ -1,9 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
+    android:layout_width="match_parent"
     android:padding="5dp"
+    android:background="@drawable/dotted_bg"
     >
-
-
-</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        >
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"/>
+        <Button
+            android:id="@+id/find_button"
+            android:text="Find Route"
+            android:textColor="#000"
+            android:layout_below="@id/map"
+            android:layout_marginTop="15dp"
+            android:textSize="20sp"
+            android:layout_width="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="60dp"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#edff00"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            />
+    </RelativeLayout>
+</ScrollView>

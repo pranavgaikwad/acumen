@@ -30,17 +30,32 @@
                 style="@android:style/Widget.DeviceDefault.ProgressBar.Large"
                 android:indeterminate="true" />
         </RelativeLayout>
-    <TextView
-        android:id="@+id/imgMapDescription"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_below="@id/image_view"
-        android:layout_gravity="center"
-        android:textColor="@android:color/black"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/border"
-        android:gravity="center"
-        android:padding="2dp"
-         />
+        <RelativeLayout
+            android:id="@+id/data_layout"
+            android:layout_height="100dp"
+            android:layout_below="@id/image_view"
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            >
+            <TextView
+                android:id="@+id/imgMapDescription"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:textColor="@android:color/black"
+                android:background="@drawable/border"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:padding="2dp"
+                />
+            <ProgressBar
+                android:id="@+id/progressBar2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                style="@android:style/Widget.DeviceDefault.ProgressBar.Small"
+                android:indeterminate="true" />
+         </RelativeLayout>
 </RelativeLayout>
 </ScrollView>

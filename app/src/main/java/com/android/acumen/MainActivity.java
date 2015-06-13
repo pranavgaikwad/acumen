@@ -48,7 +48,7 @@ public class MainActivity extends Activity {
     // slide menu items
     private String[] navMenuTitles;
     private TypedArray navMenuIcons;
-
+    private int previous;
     private ArrayList<NavDrawerItem> navDrawerItems;
     private NavDrawerListAdapter adapter;
 
@@ -148,6 +148,7 @@ public class MainActivity extends Activity {
     private void displayView(int position) {
         // update the main content by replacing fragments
         Fragment fragment = null;
+
         switch (position) {
             case 0:
                 break;
@@ -165,8 +166,8 @@ public class MainActivity extends Activity {
             case 5:
                 break;
             case 6:
-
-                break;
+               fragment = new FragmentFind();
+               break;
             default:
                 break;
         }

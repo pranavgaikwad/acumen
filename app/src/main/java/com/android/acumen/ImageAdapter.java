@@ -80,6 +80,7 @@ public class ImageAdapter extends PagerAdapter {
         txtView.setText(ImageInfo[position]);
 
         final ProgressBar pb = (ProgressBar)myView.findViewById(R.id.progressBar);
+        final ProgressBar pb2 = (ProgressBar)myView.findViewById(R.id.progressBar2);
 //        new LoadImage(img,pb).execute("http://goo.gl/UjlvzJ");
         pb.setVisibility(View.VISIBLE);
         Picasso.with(context)
@@ -98,6 +99,12 @@ public class ImageAdapter extends PagerAdapter {
                 });
         ((ViewPager)container).addView(myView);
 
+        if(txtView.getText() == ""){
+            pb2.setVisibility(View.VISIBLE);
+        }
+        else{
+            pb2.setVisibility(View.INVISIBLE);
+        }
 
 
         return myView;
@@ -217,10 +224,10 @@ class GetData extends AsyncTask<String, Void, String> {
             } catch (MalformedURLException e) {
                 imageAdapter.ImageInfo[position] = "Error fetching data";
             } catch (IOException e) {
-                // imageAdapter.ImageInfo[position] = e.getMessage();
+                imageAdapter.ImageInfo[position] = "Error fetching data";
             }
         }
-        Log.d("Info : ", imageAdapter.ImageInfo[0]);
+        //Log.d("Info : ", imageAdapter.ImageInfo[0]);
         return null;
     }
 
