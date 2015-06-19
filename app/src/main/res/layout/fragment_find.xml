@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
+    android:id="@+id/map_container"
     android:layout_width="match_parent"
     android:padding="5dp"
-    android:background="@drawable/dotted_bg"
+    android:background="@drawable/gradient_bg"
     >
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@android:color/transparent"
         android:padding="5dp"
         >
         <fragment
@@ -18,7 +20,7 @@
         <Button
             android:id="@+id/find_button"
             android:text="Find Route"
-            android:textColor="#000"
+            android:textColor="#ffff"
             android:layout_below="@id/map"
             android:layout_marginTop="15dp"
             android:textSize="20sp"
@@ -26,7 +28,6 @@
             android:layout_centerHorizontal="true"
             android:layout_height="60dp"
             android:background="@drawable/buttonshape"
-            android:shadowColor="#edff00"
             android:shadowDx="0"
             android:shadowDy="0"
             android:shadowRadius="5"

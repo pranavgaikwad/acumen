@@ -16,6 +16,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.support.v4.app.FragmentManager;
 import android.view.InflateException;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,6 +29,8 @@ import android.widget.Toast;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.MapView;
+import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -44,6 +47,7 @@ public class FragmentFind extends Fragment implements LocationListener {
     private Context context;
     private GoogleMap googleMap;
     private View rootView;
+    private MapFragment mapFragment;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -164,6 +168,25 @@ public class FragmentFind extends Fragment implements LocationListener {
                         .show();
             }
         }
+        else{
+            setUpMap();
+        }
+    }
+
+    public void setUpMap(){
+        double latitude = 18.449532;
+        double longitude = 73.798646;
+
+        // create marker
+        MarkerOptions marker = new MarkerOptions().position(new LatLng(latitude, longitude)).title("Acumen Furniture");
+
+        // adding marker
+        googleMap.addMarker(marker);
+
+        CameraPosition cameraPosition = new CameraPosition.Builder().target(
+                new LatLng(latitude, longitude)).zoom(15).build();
+
+        googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
     }
 
     @Override
@@ -174,12 +197,27 @@ public class FragmentFind extends Fragment implements LocationListener {
     @Override
     public void onResume() {
         super.onResume();
-        // initializeMap(context);
+        if(googleMap == null)
+            initializeMap(context);
     }
 
     @Override
     public void onStatusChanged(String provider, int status, Bundle extras) {
 
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        if(googleMap != null){
+            setUpMap();
+        }
+        else{
+            googleMap = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
+            if(googleMap != null){
+                setUpMap();
+            }
+        }
     }
 
     @Override
@@ -191,8 +229,10 @@ public class FragmentFind extends Fragment implements LocationListener {
     public void onDestroyView() {
         super.onDestroyView();
         MapFragment f = (MapFragment) getFragmentManager().findFragmentById(R.id.map);
-        if(f != null){}
+        if(f != null) {
             getFragmentManager().beginTransaction().remove(f).commit();
+            f = null;
+        }
     }
 
     @Override

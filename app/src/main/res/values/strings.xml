@@ -14,6 +14,28 @@
         <item>Contact</item>
         <item>Find Us</item>
     </string-array>
+    <string name="home_information">
+        <![CDATA[
+        <html>
+            <head>
+                <style type="text/css">
+                @font-face {
+                    font-family: MyFont;
+                    src: url("myfont.otf")
+                }
+                body {
+                    font-family: MyFont;
+                    font-size: small;
+                    text-align: justify;
+                }
+                </style>
+            </head>
+            <body style="text-align:justify;color:black;">
+                Acumen Modular Furniture, as a company, is involved in manufacturing of modular furnitures for offices, residences and modular kitchens. Acumen, as a manufacturer for modular furniture has changed the typical tag of ready-made furniture and has made it customized. Our ability is to become #1 selling brand in residential and office furniture through quality, customization and service.</br></br>With over 12 years of experience, our product portfolio is extensive and comprehensive. We have numerous products ranging from workstations to executive desks in office furniture and a wide range to choose from beds to living room units for residences.\n\nAcumen also provides turnkey execution of Corporate, Residential and Commercial Interiors. At Acumen, we provide a mix of traditional carpentry and trendy modular solutions to its clients.</br></br>Acumen provides all types of material as per need like commercial plywood, particle board, MDF etc. Depending on the requirement, one can choose from wide variety of material,finishes,accessories.
+            </body>
+        </html>
+        ]]>
+        </string>
 
     <!-- Nav Drawer List Item Icons -->
     <!-- Keep them in order as the titles are in -->

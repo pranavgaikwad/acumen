@@ -2,10 +2,10 @@
 <resources>
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
-    <color name="actionbar_bg">#cc181e</color>
+    <color name="actionbar_bg">#363635</color>
     <color name="transparent">#00000000</color>
     <color name="drawer_bg">#7f7f7f</color>
 </resources>
 
 
-<!-- Blue : 109ee1 -->
+<!-- Blue : 109ee1 Red : cc181e -->

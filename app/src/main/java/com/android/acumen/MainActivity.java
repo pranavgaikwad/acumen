@@ -1,19 +1,10 @@
 package com.android.acumen;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.location.Location;
-import android.net.Uri;
-import android.os.AsyncTask;
-import android.provider.Settings;
 import android.support.v4.widget.DrawerLayout;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -22,15 +13,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.Toast;
-
-import com.android.adapters.GPSTracker;
 import com.android.adapters.NavDrawerListAdapter;
 import com.android.model.NavDrawerItem;
-
-import java.io.InputStream;
 import java.util.ArrayList;
 
 
@@ -151,6 +136,7 @@ public class MainActivity extends Activity {
 
         switch (position) {
             case 0:
+                fragment = new FragmentHome();
                 break;
             case 1:
                 break;
@@ -164,6 +150,7 @@ public class MainActivity extends Activity {
                 fragment = new FragmentResidential();
                 break;
             case 5:
+                fragment = new FragmentContact();
                 break;
             case 6:
                fragment = new FragmentFind();
@@ -245,25 +232,3 @@ public class MainActivity extends Activity {
     }
 }
 
-/*
-double dlon = 73.7985657;
-double dlat = 18.450745;
-GPSTracker gpsTracker = new GPSTracker(this.getApplicationContext());
-double slat = 0;
-double slon = 0;
-String slatt = "NULL";
-String slong = "NULL";
-if(gpsTracker.canGetLocation()){
-        slat = gpsTracker.getLatitude();
-        slon = gpsTracker.getLongitude();
-        slatt = Double.toString(slat);
-        slong = Double.toString(slon);
-        Toast.makeText(getBaseContext(),slatt+slong ,
-        Toast.LENGTH_SHORT).show();
-        //final Intent mapIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://maps.google.com/maps?"+"saddr="+slat+","+slon+"&daddr="+dlat+","+dlon));
-        //mapIntent.setPackage("com.google.android.apps.maps");
-        //startActivity(mapIntent);
-        }
-        else {
-        // handle gps not enabled here
-        }*/

@@ -7,6 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.viewpagerindicator.CirclePageIndicator;
+import com.viewpagerindicator.LinePageIndicator;
+import com.viewpagerindicator.UnderlinePageIndicator;
+
 public class FragmentOffice extends Fragment {
 
     public FragmentOffice(){}
@@ -21,6 +25,10 @@ public class FragmentOffice extends Fragment {
         ImageAdapter imageAdapter = new ImageAdapter(getActivity(),"http://pg18.comeze.com/apps/acumen/office/list.php","http://pg18.comeze.com/apps/acumen/office/");
         viewPager.setAdapter(imageAdapter);
         viewPager.setCurrentItem(0);
+
+        UnderlinePageIndicator linePageIndicator = (UnderlinePageIndicator)rootView.findViewById(R.id.officeGalleryIndicator);
+        linePageIndicator.setFades(false);
+        linePageIndicator.setViewPager(viewPager);
 
         return rootView;
     }

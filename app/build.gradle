@@ -24,4 +24,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:21.0.3'
     compile files('src/main/java/picasso-2.5.2.jar')
     compile "com.google.android.gms:play-services:4.3.23"
+    compile project(':viewPagerLibrary')
 }

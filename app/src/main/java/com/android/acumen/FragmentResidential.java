@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.viewpagerindicator.UnderlinePageIndicator;
+
 public class FragmentResidential extends Fragment {
 
     public FragmentResidential(){}
@@ -21,6 +23,10 @@ public class FragmentResidential extends Fragment {
         ImageAdapter imageAdapter = new ImageAdapter(getActivity(),"http://pg18.comeze.com/apps/acumen/residential/list.php","http://pg18.comeze.com/apps/acumen/residential/");
         viewPager.setAdapter(imageAdapter);
         viewPager.setCurrentItem(0);
+
+        UnderlinePageIndicator linePageIndicator = (UnderlinePageIndicator)rootView.findViewById(R.id.officeGalleryIndicator);
+        linePageIndicator.setFades(false);
+        linePageIndicator.setViewPager(viewPager);
 
         return rootView;
     }

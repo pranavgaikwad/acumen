@@ -52,7 +52,6 @@ public class ImageAdapter extends PagerAdapter {
         this.context = context;
         this.dirLink = dirLink;
         this.imgLink = imgLink;
-
         new GetList(this).execute(dirLink);
 
     }
