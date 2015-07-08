@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="5dp"
-    android:background="@drawable/dotted_bg"
+    android:background="@drawable/gradient_bg"
      >
 
     <android.support.v4.view.ViewPager
@@ -16,6 +16,6 @@
     <com.viewpagerindicator.UnderlinePageIndicator
         android:id="@+id/officeGalleryIndicator"
         android:layout_width="fill_parent"
-        android:layout_height="5dp" />
+        android:layout_height="7dp" />
 
 </LinearLayout>

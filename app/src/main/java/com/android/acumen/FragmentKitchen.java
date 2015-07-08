@@ -26,6 +26,7 @@ public class FragmentKitchen extends Fragment {
 
         UnderlinePageIndicator linePageIndicator = (UnderlinePageIndicator)rootView.findViewById(R.id.officeGalleryIndicator);
         linePageIndicator.setFades(false);
+        linePageIndicator.setBackgroundColor(getResources().getColor(R.color.scroll_bg));
         linePageIndicator.setViewPager(viewPager);
 
         return rootView;

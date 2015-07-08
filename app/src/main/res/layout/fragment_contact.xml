@@ -7,8 +7,9 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:background="@drawable/border"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@drawable/abc_popup_background_mtrl_mult"
         >
 
         <LinearLayout
@@ -28,6 +29,7 @@
 
             <EditText
                 android:layout_width="match_parent"
+                android:maxLength="70"
                 android:layout_height="wrap_content"
                 android:id="@+id/contact_nameField" />
         </LinearLayout>
@@ -51,6 +53,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:maxLength="60"
                 android:inputType="textEmailAddress"
                 android:ems="10"
                 android:id="@+id/contact_emailField" />
@@ -75,6 +78,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:maxLength="10"
                 android:inputType="phone"
                 android:ems="10"
                 android:id="@+id/contact_phoneField" />
@@ -100,6 +104,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="168dp"
+                android:maxLength="200"
                 android:gravity="top|left"
                 android:id="@+id/contact_messageField"
                 android:inputType="text" />

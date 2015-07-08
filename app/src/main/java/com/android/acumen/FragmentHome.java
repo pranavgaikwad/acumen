@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
+import com.pushbots.push.Pushbots;
 import com.viewpagerindicator.UnderlinePageIndicator;
 
 public class FragmentHome extends Fragment {
@@ -21,6 +22,7 @@ public class FragmentHome extends Fragment {
                              Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
+
         WebView homeDescription = (WebView)rootView.findViewById(R.id.homeDescription);
         homeDescription.setVerticalScrollBarEnabled(false);
         WebSettings webSettings = homeDescription.getSettings();

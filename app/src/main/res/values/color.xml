@@ -2,10 +2,11 @@
 <resources>
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
-    <color name="actionbar_bg">#363635</color>
+    <color name="actionbar_bg">#191919</color>
     <color name="transparent">#00000000</color>
     <color name="drawer_bg">#7f7f7f</color>
+    <color name="scroll_bg">#cccccc</color>
 </resources>
 
 
-<!-- Blue : 109ee1 Red : cc181e -->
+<!-- Blue : 109ee1 Red : cc181e  Black 363635-->

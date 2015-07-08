@@ -23,14 +23,18 @@ import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.BufferedHttpEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.params.HttpConnectionParams;
 
 import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
@@ -216,12 +220,13 @@ class GetData extends AsyncTask<String, Void, String> {
                 while ((str = in.readLine()) != null) {
                     all += str;
                 }
-                imageAdapter.ImageInfo[position] = all;
 
+                imageAdapter.ImageInfo[position] = all;
+                Log.d("Data : ", all);
                 in.close();
 
             } catch (MalformedURLException e) {
-                imageAdapter.ImageInfo[position] = "Error fetching data";
+                imageAdapter.ImageInfo[position] = "Error fetching data!";
             } catch (IOException e) {
                 imageAdapter.ImageInfo[position] = "Error fetching data";
             }

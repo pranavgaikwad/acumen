@@ -14,20 +14,26 @@
         <ImageView
             android:layout_width="match_parent"
             android:scaleType="fitXY"
+            android:background="@drawable/abc_popup_background_mtrl_mult"
             android:id="@+id/acumen_home_image"
             android:layout_height="250dp"
             android:src="@drawable/acumen_home"
             android:contentDescription="Acumen Modular Furniture"/>
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/acumen_home_image"
+            android:background="@drawable/abc_popup_background_mtrl_mult">
         <WebView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/acumen_home_image"
             android:id="@+id/homeDescription"
-            android:layout_marginTop="15dp"
             android:padding="2dp"
             android:background="@drawable/border"
             />
+        </LinearLayout>
     </RelativeLayout>
 
 </ScrollView>

@@ -16,11 +16,11 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
+
                 android:scaleType="fitXY"
-                android:padding="5dp"
                 android:contentDescription="Loading"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/border"
+                android:background="@drawable/abc_popup_background_mtrl_mult"
                 android:id="@+id/imgMap"/>
             <ProgressBar
                 android:id="@+id/progressBar"
@@ -35,19 +35,18 @@
             android:layout_height="100dp"
             android:layout_below="@id/image_view"
             android:layout_width="match_parent"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             >
             <TextView
                 android:id="@+id/imgMapDescription"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:textColor="@android:color/black"
-                android:background="@drawable/border"
+                android:textColor="@color/actionbar_bg"
+                android:background="@drawable/abc_popup_background_mtrl_mult"
                 android:layout_centerHorizontal="true"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:padding="2dp"
                 />
             <ProgressBar
                 android:id="@+id/progressBar2"
